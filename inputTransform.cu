@@ -16,15 +16,15 @@
 // Input size
 int const BATCH = 1; //Must be 1 in this program
 int const DEPTH = 1;
-int const WIDTH = 32;
-int const LENGTH = 32;
+int const WIDTH = 128;
+int const LENGTH = 128;
 // Kernel characteristics
 int const ZPADX = 0;
 int const ZPADY = 0;
 int const STRIDEX = 1;
 int const STRIDEY = 1;
-int const CONV_RECP_SIZEX = 3; 
-int const CONV_RECP_SIZEY = 3; 
+int const CONV_RECP_SIZEX = 3;
+int const CONV_RECP_SIZEY = 3;
 int const NUM_OF_KERNELS = 1;
 // Convolution output characteristics
 int const convLayerSizeX = ((WIDTH - CONV_RECP_SIZEX + 2 * ZPADX) / STRIDEX + 1);
@@ -36,9 +36,11 @@ int const transformSizeX = CONV_RECP_SIZEX * CONV_RECP_SIZEY * DEPTH;
 __global__
 void transformToMul(float* inputMatrix, float* reducedMatrix)
 {
+
 	int Y = blockIdx.y * blockDim.y + threadIdx.y;
 	int X = blockIdx.x * blockDim.x + threadIdx.x;
-	if(X < transformSizeX && Y < transformSizeY)
+
+	if (Y < transformSizeY)
 	{
 		int inputX = (Y % convLayerSizeX) * STRIDEX + X % CONV_RECP_SIZEY;
 		int inputY = (Y / convLayerSizeX) * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
@@ -101,8 +103,8 @@ int main()
 	cudaError_t cudaStatus;
 
 	// Initialize Host data, kernel and output
-	float* hostInputMatrix = new float [BATCH * DEPTH * LENGTH * WIDTH];
-	float* hostTransformedInput = new float [transformSizeY * transformSizeX]();
+	float* hostInputMatrix = new float[BATCH * DEPTH * LENGTH * WIDTH];
+	float* hostTransformedInput = new float[transformSizeY * transformSizeX]();
 
 	// GENERATING INPUT
 	std::cout << "Inputs:\n";
@@ -128,13 +130,13 @@ int main()
 		fprintf(stderr, "cudaMemcpy failed!");
 		goto Error;
 	}
-	
+
 	// Initializing sizes of grid and block of threads 
 	dim3 threadsPerBlock(transformSizeX, transformSizeY);
 	dim3 blocksPerGrid(1, 1);
 	if (transformSizeY * transformSizeX > 1024) {
-		threadsPerBlock.x = 32;
-		threadsPerBlock.y = 32;
+		threadsPerBlock.x = transformSizeX;
+		threadsPerBlock.y = 1024 / transformSizeX;
 		blocksPerGrid.x = ceil(double(transformSizeX) / double(threadsPerBlock.x));
 		blocksPerGrid.y = ceil(double(transformSizeY) / double(threadsPerBlock.y));
 	}
