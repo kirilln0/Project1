@@ -185,7 +185,7 @@ int main()
 		for (int j = 0; j < transformSizeX; j++)
 		{
 
-			std::cout << std::setprecision(1) << std::fixed << hostTransformedInput[k * transformSizeX + 0] << " ";
+			std::cout << std::setprecision(1) << std::fixed << hostTransformedInput[k * transformSizeX + j] << " ";
 
 		}
 		std::cout << "\n";
