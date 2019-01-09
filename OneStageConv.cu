@@ -16,16 +16,16 @@
 // Input size
 int const BATCH = 1; //Must be 1 in this program
 int const DEPTH = 3;
-int const WIDTH = 5;
-int const LENGTH = 5;
+int const WIDTH = 100;
+int const LENGTH = 100;
 // Kernel characteristics
 int const ZPADX = 0;
 int const ZPADY = 0;
 int const STRIDEX = 1;
 int const STRIDEY = 1;
-int const CONV_RECP_SIZEX = 2;
-int const CONV_RECP_SIZEY = 2;
-int const NUM_OF_KERNELS = 2;
+int const CONV_RECP_SIZEX = 3;
+int const CONV_RECP_SIZEY = 3;
+int const NUM_OF_KERNELS = 10;
 // Convolution output characteristics
 int const convLayerSizeX = ((WIDTH - CONV_RECP_SIZEX + 2 * ZPADX) / STRIDEX + 1);
 int const convLayerSizeY = ((LENGTH - CONV_RECP_SIZEY + 2 * ZPADY) / STRIDEY + 1);
@@ -38,52 +38,38 @@ int const CONV_FINAL_SIZE = convLayerSizeX * convLayerSizeY * NUM_OF_KERNELS;
 __global__
 void rowMul(float* weights, float* reducedMat, float* result)
 {
-	//for (int i = 0; i < transformSizeX; i++)
-	//{
-		//*(result + CONV_FINAL_SIZE) += weights[threadIdx.x * transformSizeX + i] * (*(reducedMat + i));
-	//}
+	for (int i = 0; i < transformSizeX; i++)
+	{
+		*(result + CONV_FINAL_SIZE) += weights[threadIdx.x * transformSizeX + i] * (*(reducedMat + i));
+	}
 }
 
 __global__
 void Convolution(float* inputMatrix, float* reducedMatrix, float* weights, float* result)
 {
 
-	int Y = blockIdx.y * blockDim.y + threadIdx.y;
-	int X = blockIdx.x * blockDim.x + threadIdx.x;
-
-	if (Y < transformSizeY)
+	int Y = blockIdx.x * blockDim.y + threadIdx.y;
+	int X = threadIdx.x;
+	int convX = Y % convLayerSizeX;
+	int convY = Y / convLayerSizeX;
+	int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
+	int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
+	int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
+	if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
 	{
-		int convX = Y % convLayerSizeX;
-		int convY = Y / convLayerSizeX;
-		int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
-		int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
-		int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
-		if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
-		{
 
-			reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
-		}
-		else
-		{
-			reducedMatrix[(Y * transformSizeX) + X] = 0;
-		}
-		__syncthreads();
-		if (blockIdx.x == 0)
-		{
-			float sum = 0;
-			for (int j = 0; j < NUM_OF_KERNELS; j++)
-			{
-				for (int i = 0; i < transformSizeX; i++)
-				{
-					sum += weights[j * transformSizeX + i] * reducedMatrix[Y * transformSizeX + i];
-				}
-				result[j * transformSizeY + (Y / transformSizeY)] = sum;
-			}
-			//rowMul<<<1, NUM_OF_KERNELS>>>(weights, &reducedMatrix[Y * transformSizeX], &result[convY * convLayerSizeX + convX]);
-		}
+		reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
 	}
-	
-
+	else
+	{
+		reducedMatrix[(Y * transformSizeX) + X] = 0;
+	}
+	float sum = 0;
+	float reduced_value = reducedMatrix[Y * transformSizeX + X];
+	for (int j = 0; j < NUM_OF_KERNELS; j++)
+	{
+		atomicAdd(result+(j * convLayerSizeX * convLayerSizeY + Y), reduced_value * weights[j * transformSizeX + X]);
+	}
 }
 
 
@@ -95,7 +81,7 @@ void generateFlat4DData(float* matrix, int x, int y, int z, int d, double type, 
 	{
 		for (int c = 0; c < z; c++)
 		{
-			std::cout << "slice: " << c + 1 << "\n";
+			//std::cout << "slice: " << c + 1 << "\n";
 			for (int j = 0; j < y; j++)
 			{
 				for (int i = 0; i < x; i++)
@@ -114,13 +100,13 @@ void generateFlat4DData(float* matrix, int x, int y, int z, int d, double type, 
 						w += jump;
 					}
 
-					std::cout << std::setprecision(1) << std::fixed << matrix[((b * z + c) * y + j) * x + i] << " , ";
+					//std::cout << std::setprecision(1) << std::fixed << matrix[((b * z + c) * y + j) * x + i] << " , ";
 				}
-				std::cout << "\n";
+				//std::cout << "\n";
 			}
-			std::cout << "\n";
+			//std::cout << "\n";
 		}
-		std::cout << "\n";
+		//std::cout << "\n";
 	}
 }
 
@@ -183,15 +169,16 @@ int main()
 	}
 
 	// Initializing sizes of grid and block of threads 
-	dim3 threadsPerBlock(transformSizeX, transformSizeY);
-	dim3 blocksPerGrid(1, 1);
+	dim3 threadsPerBlock(transformSizeX, 1);
+	dim3 blocksPerGrid(transformSizeY, 1);
+	/*
 	if (transformSizeY * transformSizeX > 1024) {
 		threadsPerBlock.x = transformSizeX;
-		threadsPerBlock.y = 1024 / transformSizeX;
+		threadsPerBlock.y = 1;//1024 / transformSizeX;
 		blocksPerGrid.x = ceil(double(transformSizeX) / double(threadsPerBlock.x));
 		blocksPerGrid.y = ceil(double(transformSizeY) / double(threadsPerBlock.y));
 	}
-
+	*/
 	// Run the kernel function and meassure time
 	cudaEventRecord(start, 0);
 
@@ -242,23 +229,23 @@ int main()
 		for (int j = 0; j < transformSizeX; j++)
 		{
 
-			std::cout << std::setprecision(1) << std::fixed << hostTransformedInput[k * transformSizeX + j] << " ";
+			//std::cout << std::setprecision(1) << std::fixed << hostTransformedInput[k * transformSizeX + j] << " ";
 
 		}
-		std::cout << "\n";
+		//std::cout << "\n";
 	}
 	std::cout << "Convolution result:\n";
 	for (int k = 0; k < CONV_FINAL_SIZE; k++)
 	{
 		if (k % convLayerSizeX == 0)
 		{
-			printf("\n");
+			//printf("\n");
 		}
 		if (k % (convLayerSizeX * convLayerSizeY) == 0)
 		{
-			printf("Depth=%d\n", k / (convLayerSizeX * convLayerSizeY));
+			//printf("Depth=%d\n", k / (convLayerSizeX * convLayerSizeY));
 		}
-		std::cout << std::setprecision(1) << std::fixed << hostConvResult[k] << " ";
+		//std::cout << std::setprecision(1) << std::fixed << hostConvResult[k] << " ";
 
 
 	}
