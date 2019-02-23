@@ -1,0 +1,936 @@
+﻿Build started 23-Feb-19 8:08:44 PM.
+     1>Project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" on node 2 (Rebuild target(s)).
+     1>Building with tools version "15.0".
+       Target "EnableIntermediateOutputPathMismatchWarning" skipped, due to false condition; ('$(RestoreProjectStyle)' == 'PackageReference') was evaluated as ('' == 'PackageReference').
+     1>Target "_CheckForInvalidConfigurationAndPlatform" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "SetTelemetryEnvironmentVariables" depends on it):
+       Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+       Using "Message" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "Message"
+         Configuration=Debug
+       Done executing task "Message".
+       Task "Message"
+         Platform=x64
+       Done executing task "Message".
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\' != '' and !HasTrailingSlash('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\')).
+       Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+       Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('x64\Debug\' != '' and !HasTrailingSlash('x64\Debug\')).
+       Task "Error" skipped, due to false condition; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) was evaluated as ( 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\obj\' != '' And 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\obj\' != 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\obj\' ).
+       Task "Warning" skipped, due to false condition; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) was evaluated as ( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\obj\' ).
+     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "NAiveConvnew.vcxproj".
+       Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+     1>Target "SetTelemetryEnvironmentVariables" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+       Using "SetEnv" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Task "SetEnv"
+         VSTEL_SolutionSessionID={58935062-F0D4-42F2-B071-7AF7B7F88448}
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         VSTEL_CurrentSolutionBuildID=176445531
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         VSTEL_ProjectID={8B77311A-F527-4B3F-9B3E-9C206EED8BB7}
+       Done executing task "SetEnv".
+     1>Done building target "SetTelemetryEnvironmentVariables" in project "NAiveConvnew.vcxproj".
+     1>Target "_PrepareForRebuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+     1>Done building target "_PrepareForRebuild" in project "NAiveConvnew.vcxproj".
+     1>Target "BeforeRebuild" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+     1>Done building target "BeforeRebuild" in project "NAiveConvnew.vcxproj".
+     1>Target "_PrepareForClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+       Using "Delete" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "Delete"
+         Deleting file "x64\Debug\NAiveConvnew.tlog\NAiveConvnew.lastbuildstate".
+       Done executing task "Delete".
+     1>Done building target "_PrepareForClean" in project "NAiveConvnew.vcxproj".
+     1>Target "BeforeClean" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+     1>Done building target "BeforeClean" in project "NAiveConvnew.vcxproj".
+       Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                           ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                          Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'exe' != 'library') or
+                           ('' == '')) and
+                          Exists('obj\NAiveConvnew.vcxproj.UnmanagedRegistration.cache')).
+     1>Target "CoreClean" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+       Task "Delete"
+         File "x64\Debug\\TempCA\NAiveConvnew.pdb" doesn't exist. Skipping.
+         File "x64\Debug\\TempCA\NAiveConvnew.exe" doesn't exist. Skipping.
+       Done executing task "Delete".
+       Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "ReadLinesFromFile"
+       Done executing task "ReadLinesFromFile".
+       Using "FindUnderPath" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "FindUnderPath"
+         Comparison path is "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\".
+       Done executing task "FindUnderPath".
+       Task "FindUnderPath"
+         Comparison path is "x64\Debug\".
+       Done executing task "FindUnderPath".
+       Task "Delete"
+       Done executing task "Delete".
+       Using "RemoveDuplicates" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "RemoveDuplicates"
+       Done executing task "RemoveDuplicates".
+       Using "MakeDir" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "CoreClean" in project "NAiveConvnew.vcxproj".
+     1>Target "AssignProjectConfiguration" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareProjectReferences" depends on it):
+       Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "AssignProjectConfiguration"
+       Done executing task "AssignProjectConfiguration".
+     1>Done building target "AssignProjectConfiguration" in project "NAiveConvnew.vcxproj".
+     1>Target "_SplitProjectReferencesByFileExistence" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareProjectReferences" depends on it):
+       Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
+     1>Done building target "_SplitProjectReferencesByFileExistence" in project "NAiveConvnew.vcxproj".
+     1>Target "_GetProjectReferenceTargetFrameworkProperties" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareProjectReferences" depends on it):
+       Using "MSBuild" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "MSBuild"
+       Done executing task "MSBuild".
+       Task "GetReferenceNearestTargetFrameworkTask" skipped, due to false condition; ('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != '') was evaluated as ('0' != '0' and '.NETFramework,Version=v4.0' != '').
+     1>Done building target "_GetProjectReferenceTargetFrameworkProperties" in project "NAiveConvnew.vcxproj".
+     1>Target "PrepareProjectReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CleanReferencedProjects" depends on it):
+     1>Done building target "PrepareProjectReferences" in project "NAiveConvnew.vcxproj".
+     1>Target "CleanReferencedProjects" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' != 'true' and 'true' == 'true' and '' != '').
+     1>Done building target "CleanReferencedProjects" in project "NAiveConvnew.vcxproj".
+     1>Target "CleanPublishFolder" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+       Task "RemoveDir" skipped, due to false condition; ('$(PublishDir)'=='$(OutputPath)app.publish\' and Exists('$(PublishDir)')) was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\app.publish\'=='C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\app.publish\' and Exists('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\app.publish\')).
+     1>Done building target "CleanPublishFolder" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterClean" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+     1>Done building target "AfterClean" in project "NAiveConvnew.vcxproj".
+       Target "EntityClean" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+     1>Target "BeforeCppClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CppClean" depends on it):
+     1>Done building target "BeforeCppClean" in project "NAiveConvnew.vcxproj".
+     1>Target "CoreCppClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CppClean" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Using "CppClean" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Task "CppClean"
+       Done executing task "CppClean".
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "CoreCppClean" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterCppClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CppClean" depends on it):
+     1>Done building target "AfterCppClean" in project "NAiveConvnew.vcxproj".
+     1>Target "PGInstrumentedClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CppClean" depends on it):
+       Task "Delete"
+       Done executing task "Delete".
+     1>Done building target "PGInstrumentedClean" in project "NAiveConvnew.vcxproj".
+     1>Target "InitializeCudaHostProperties" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "AddCudaCompileMetadata" depends on it):
+     1>Done building target "InitializeCudaHostProperties" in project "NAiveConvnew.vcxproj".
+     1>Target "AddCudaCompileMetadata" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaClean" depends on it):
+       Building target "AddCudaCompileMetadata" completely.
+       No input files were specified.
+       Using "SanitizePaths" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "SanitizePaths"
+       Done executing task "SanitizePaths".
+       Task "ReadLinesFromFile"
+       Done executing task "ReadLinesFromFile".
+       Using "SplitToItemMetadata" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "SplitToItemMetadata"
+       Done executing task "SplitToItemMetadata".
+     1>Done building target "AddCudaCompileMetadata" in project "NAiveConvnew.vcxproj".
+     1>Target "ValidateCudaBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaClean" depends on it):
+       Task "Error" skipped, due to false condition; (!Exists($(CudaToolkitDir))) was evaluated as (!Exists(C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\)).
+     1>Done building target "ValidateCudaBuild" in project "NAiveConvnew.vcxproj".
+     1>Target "CudaClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CppClean" depends on it):
+       Building target "CudaClean" completely.
+       No input files were specified.
+       Initializing task factory "XamlTaskFactory" from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Using "CudaCompile" task from the task factory "XamlTaskFactory".
+       Task "CudaCompile"
+         cmd.exe /C "C:\Users\kiril\AppData\Local\Temp\tmp17479ae212ee4dcc87a75d1cba6bb1e1.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe" -ccbin "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od  /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu" -clean
+         
+         C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe" -ccbin "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od  /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu" -clean 
+         kernel.cu
+       Done executing task "CudaCompile".
+       Task "Delete"
+         Deleting file "x64\Debug\kernel.cu934570491.deps".
+       Done executing task "Delete".
+     1>Done building target "CudaClean" in project "NAiveConvnew.vcxproj".
+     1>Target "CppClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Clean" depends on it):
+     1>Done building target "CppClean" in project "NAiveConvnew.vcxproj".
+     1>Target "Clean" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+     1>Done building target "Clean" in project "NAiveConvnew.vcxproj".
+       Target "SetTelemetryEnvironmentVariables" skipped. Previously built successfully.
+     1>Target "_PrepareForBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+       Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+     1>Done building target "_PrepareForBuild" in project "NAiveConvnew.vcxproj".
+     1>Target "_PrepareForReferenceResolution" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveReferences" depends on it):
+       Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+     1>Done building target "_PrepareForReferenceResolution" in project "NAiveConvnew.vcxproj".
+       Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as (''!='' and 'false'=='true' and '' != 'false').
+     1>Target "BeforeResolveReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveReferences" depends on it):
+     1>Done building target "BeforeResolveReferences" in project "NAiveConvnew.vcxproj".
+       Target "AssignProjectConfiguration" skipped. Previously built successfully.
+       Target "PrepareProjectReferences" skipped. Previously built successfully.
+       Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+     1>Target "ResolveProjectReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveReferences" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' != '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' == '10.0' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+       Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
+     1>Done building target "ResolveProjectReferences" in project "NAiveConvnew.vcxproj".
+       Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+       Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+       Target "ResolveProjectReferences" skipped. Previously built successfully.
+       Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+     1>Target "GetFrameworkPaths" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+     1>Done building target "GetFrameworkPaths" in project "NAiveConvnew.vcxproj".
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+       Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+       Target "GetFrameworkPaths" skipped. Previously built successfully.
+     1>Target "GetReferenceAssemblyPaths" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+     1>Done building target "GetReferenceAssemblyPaths" in project "NAiveConvnew.vcxproj".
+     1>Target "SetBuildDefaultEnvironmentVariables" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "SetEnv"
+         PATH=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86;D:\Windows Kits\10\bin\10.0.17763.0\x86;;D:\Programs\Visual Studio\Common7\tools;D:\Programs\Visual Studio\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;D:\Programs\Visual Studio\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;;;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Programs\Matlab\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\kiril\AppData\Local\Microsoft\WindowsApps;;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIB=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\x64;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x64;;D:\Programs\Visual Studio\VC\Auxiliary\VS\lib\x64;;D:\Windows Kits\10\lib\10.0.17763.0\ucrt\x64;;;D:\Programs\Visual Studio\VC\Auxiliary\VS\UnitTest\lib;D:\Windows Kits\10\lib\10.0.17763.0\um\x64;lib\um\x64;;Lib\um\x64
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIBPATH=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x64;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\x64;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         INCLUDE=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\include;;D:\Programs\Visual Studio\VC\Auxiliary\VS\include;;D:\Windows Kits\10\Include\10.0.17763.0\ucrt;;;D:\Programs\Visual Studio\VC\Auxiliary\VS\UnitTest\include;D:\Windows Kits\10\Include\10.0.17763.0\um;D:\Windows Kits\10\Include\10.0.17763.0\shared;D:\Windows Kits\10\Include\10.0.17763.0\winrt;D:\Windows Kits\10\Include\10.0.17763.0\cppwinrt;Include\um;
+       Done executing task "SetEnv".
+     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "NAiveConvnew.vcxproj".
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+     1>Target "GetResolvedWinMD" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForBuild" depends on it):
+     1>Done building target "GetResolvedWinMD" in project "NAiveConvnew.vcxproj".
+     1>Target "PlatformPrepareForBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == '') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == '').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v110').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v100').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v141' == 'v90').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v141' != 'v90' and 'v141' != 'v100' and 'v141' != 'v110').
+     1>Done building target "PlatformPrepareForBuild" in project "NAiveConvnew.vcxproj".
+     1>Target "_CheckWindowsSDKInstalled" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKInstalled)' != 'true') was evaluated as ('true' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true) was evaluated as ('false' != 'true' and 'true' != true).
+     1>Done building target "_CheckWindowsSDKInstalled" in project "NAiveConvnew.vcxproj".
+       Target "GetFrameworkPaths" skipped. Previously built successfully.
+       Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+       Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+     1>Target "SetCABuildNativeEnvironmentVariables" in file "D:\Programs\Visual Studio\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForBuild" depends on it):
+       Task "SetEnv"
+         CAExcludePath=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\include;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include;D:\Windows Kits\10\Include\10.0.17763.0\ucrt;;D:\Windows Kits\10\Include\10.0.17763.0\um;D:\Windows Kits\10\Include\10.0.17763.0\shared;D:\Windows Kits\10\Include\10.0.17763.0\winrt;D:\Windows Kits\10\Include\10.0.17763.0\cppwinrt;Include\um;
+       Done executing task "SetEnv".
+     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "NAiveConvnew.vcxproj".
+     1>Target "PrepareForBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'Application'!='Application' and 'Application'!='DynamicLibrary' and 'Application'!='StaticLibrary').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\'=='' and '' != 'true' and 'v141'=='v90').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as (''!='true' and 'D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as (''!='true' and 'D:\Windows Kits\10\'=='' and '' != 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''!='true' and ''=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''!='true' and ''=='true').
+       Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+       Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as (''!='true' and '' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+       Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(SpectreMitigation)' != '' and '$(SpectreMitigation)' != 'false' and (('$(_VC_Target_Library_Platform)' == 'OneCore' and !Exists('$(VC_LibraryPath_VC_x86_OneCore)')) or ('$(_VC_Target_Library_Platform)' == 'Desktop' and !Exists('$(VC_LibraryPath_VC_x86_Desktop)')))) was evaluated as ('' != 'true' and 'false' != '' and 'false' != 'false' and (('Desktop' == 'OneCore' and !Exists('D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\onecore\x86')) or ('Desktop' == 'Desktop' and !Exists('D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\x86')))).
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "PrepareForBuild" in project "NAiveConvnew.vcxproj".
+       Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+       Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as (''!='' and 'false'=='true' and '' != 'false').
+       Target "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+     1>Target "ResolveSDKReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+     1>Done building target "ResolveSDKReferences" in project "NAiveConvnew.vcxproj".
+       Target "ResolveSDKReferences" skipped. Previously built successfully.
+     1>Target "ExpandSDKReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+       Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+     1>Done building target "ExpandSDKReferences" in project "NAiveConvnew.vcxproj".
+       Target "ResolveNuGetPackageAssets" skipped, due to false condition; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) was evaluated as ('true' == 'true' and exists('obj\project.assets.json')).
+     1>Target "ResolveAssemblyReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveReferences" depends on it):
+       Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
+     1>Done building target "ResolveAssemblyReferences" in project "NAiveConvnew.vcxproj".
+       Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and 'true' == 'true').
+       Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and 'true' == 'true' and Exists('x64\Debug\NAiveConvnew.exe.config')).
+       Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+     1>Target "AfterResolveReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ResolveReferences" depends on it):
+     1>Done building target "AfterResolveReferences" in project "NAiveConvnew.vcxproj".
+       Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
+       Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
+     1>Target "ResolveReferences" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+     1>Done building target "ResolveReferences" in project "NAiveConvnew.vcxproj".
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "PrepareForBuild" skipped. Previously built successfully.
+     1>Target "InitializeBuildStatus" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+       Task "ReadLinesFromFile"
+       Done executing task "ReadLinesFromFile".
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+       Using "Touch" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "Touch"
+         Creating "x64\Debug\NAiveConvnew.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       Done executing task "Touch".
+     1>Done building target "InitializeBuildStatus" in project "NAiveConvnew.vcxproj".
+       Target "PrepareProjectReferences" skipped. Previously built successfully.
+     1>Target "BuildGenerateSourcesTraverse" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildGenerateSources" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
+     1>Done building target "BuildGenerateSourcesTraverse" in project "NAiveConvnew.vcxproj".
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "BeforeBuildGenerateSources" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+     1>Done building target "BeforeBuildGenerateSources" in project "NAiveConvnew.vcxproj".
+     1>Target "PreBuildEvent" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+       Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+       Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
+     1>Done building target "PreBuildEvent" in project "NAiveConvnew.vcxproj".
+       Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+       Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+       Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "InitializeBuildStatus" skipped. Previously built successfully.
+       Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+     1>Target "_SelectedFiles" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+     1>Done building target "_SelectedFiles" in project "NAiveConvnew.vcxproj".
+       Target "CudaFilterSelectedFiles" skipped, due to false condition; ('@(SelectedFiles)' != '') was evaluated as ('' != '').
+       Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+       Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+       Target "InitializeCudaHostProperties" skipped. Previously built successfully.
+       Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+     1>Target "InitializeCudaProjectProperties" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "AddCudaLinkMetadata" depends on it):
+       Task "SplitToItemMetadata"
+       Done executing task "SplitToItemMetadata".
+     1>Done building target "InitializeCudaProjectProperties" in project "NAiveConvnew.vcxproj".
+     1>Target "AddCudaLinkMetadata" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Building target "AddCudaLinkMetadata" completely.
+       No input files were specified.
+       Using "ResolvePaths" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "ResolvePaths"
+       Done executing task "ResolvePaths".
+     1>Done building target "AddCudaLinkMetadata" in project "NAiveConvnew.vcxproj".
+       Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+     1>Target "AddCudaCompileDeps" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Building target "AddCudaCompileDeps" completely.
+       Output file "x64\Debug\kernel.cu934570491.deps" does not exist.
+       Using "GenerateDeps" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "GenerateDeps"
+         D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" /I. /FIcuda_runtime.h /c "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu" 
+       Done executing task "GenerateDeps".
+       Task "MakeDir"
+       Done executing task "MakeDir".
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "AddCudaCompileDeps" in project "NAiveConvnew.vcxproj".
+       Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+     1>Target "AddCudaCompilePropsDeps" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Building target "AddCudaCompilePropsDeps" completely.
+       Output file "x64\Debug\kernel.cu.cache" does not exist.
+       Task "ReadLinesFromFile" skipped, due to false condition; (Exists('%(CudaCompile.PropsCacheOutputPath)')) was evaluated as (Exists('x64\Debug\kernel.cu.cache')).
+       Using "XmlPeek" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "XmlPeek"
+         Found "CudaToolkitCustomDir".
+         Found "AdditionalDeps".
+         Found "CompileOut".
+         Found "Include".
+         Found "UseHostInclude".
+         Found "Keep".
+         Found "KeepDir".
+         Found "GenerateRelocatableDeviceCode".
+         Found "NvccCompilation".
+         Found "CudaRuntime".
+         Found "NvccPath".
+         Found "RequiredIncludes".
+         Found "TargetMachinePlatform".
+         Found "InterleaveSourceInPTX".
+         Found "CodeGeneration".
+         Found "GPUDebugInfo".
+         Found "GenerateLineInfo".
+         Found "MaxRegCount".
+         Found "PtxAsOptionV".
+         Found "AdditionalCompilerOptions".
+         Found "Defines".
+         Found "UseHostDefines".
+         Found "Emulation".
+         Found "HostDebugInfo".
+         Found "FastMath".
+         Found "ProgramDataBaseFileName".
+         Found "Optimization".
+         Found "Runtime".
+         Found "RuntimeChecks".
+         Found "TypeInfo".
+         Found "Warning".
+         Found "AdditionalOptions".
+         Found "CommandLineTemplate".
+         Found "PerformDeviceLink".
+         Found "LinkOut".
+         Found "AdditionalLibraryDirectories".
+         Found "UseHostLibraryDirectories".
+         Found "AdditionalDependencies".
+         Found "UseHostLibraryDependencies".
+         Found "GPUDebugInfo".
+         Found "Optimization".
+         Found "CodeGeneration".
+         Found "TargetMachinePlatform".
+         Found "Warning".
+         Found "RuntimeChecks".
+         Found "Runtime".
+         Found "TypeInfo".
+         Found "AdditionalCompilerOptions".
+         Found "Inputs".
+         Found "AdditionalOptions".
+         Found "CommandLineTemplate".
+       Done executing task "XmlPeek".
+       Using "ReadMetadataLinesFromItems" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "ReadMetadataLinesFromItems"
+       Done executing task "ReadMetadataLinesFromItems".
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "AddCudaCompilePropsDeps" in project "NAiveConvnew.vcxproj".
+       Target "ValidateCudaBuild" skipped. Previously built successfully.
+     1>Target "ValidateCudaCodeGeneration" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Building target "ValidateCudaCodeGeneration" completely.
+       No input files were specified.
+       Using "CountItems" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "CountItems"
+       Done executing task "CountItems".
+       Task "Error" skipped, due to false condition; ('%(CudaCompile.NvccCompilation)' != 'compile' AND $(ValidateCudaCodeGenerationCount) > 1) was evaluated as ('compile' != 'compile' AND 1 > 1).
+     1>Done building target "ValidateCudaCodeGeneration" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeCudaCompileOutput" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Building target "ComputeCudaCompileOutput" completely.
+       No input files were specified.
+     1>Done building target "ComputeCudaCompileOutput" in project "NAiveConvnew.vcxproj".
+     1>Target "PrepareForCudaBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuild" depends on it):
+       Task "SanitizePaths"
+       Done executing task "SanitizePaths".
+       Using "CudaSetEnvironmentVariable" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "CudaSetEnvironmentVariable"
+         Nvda.Build.CudaTasks.CudaSetEnvironmentVariable: Setting 'CUDAFE_FLAGS' to '--sdk_dir "D:\Windows Kits\10"'
+       Done executing task "CudaSetEnvironmentVariable".
+     1>Done building target "PrepareForCudaBuild" in project "NAiveConvnew.vcxproj".
+     1>Target "CudaBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+       Task "MSBuild"
+         Overriding Global Properties for project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" with:
+           Platform=x64
+           Configuration=Debug
+           __CompileIn=C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu
+           __CompileRelativeDir=
+           __CompileFilename=kernel
+           __CompileOut=x64\Debug\kernel.cu.obj
+           __ProjectDeps=NAiveConvnew.vcxproj
+           __Deps=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cuda_runtime.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_config.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\crtdefs.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\sal.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\concurrencysal.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vadefs.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\limits.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\stddef.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\library_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\channel_descriptor.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_device_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/common_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_memory.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_memcpy_s.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\errno.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime_string.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstring.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\time.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wtime.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\math_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\math.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_math.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\stdlib.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_malloc.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_search.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstdlib.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cmath;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\yvals.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\yvals_core.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xkeycheck.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\crtdefs.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\crtdbg.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime_new_debug.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime_new.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\use_ansi.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cstdlib;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\math.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xtgmath.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xtr1common;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\math_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\channel_descriptor.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\channel_descriptor.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt/device_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\device_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\device_double_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\device_double_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_20_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_32_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_35_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_32_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_60_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_20_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_30_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_32_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_35_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_32_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\sm_61_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\sm_70_rt.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\crt\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_fetch_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\texture_indirect_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\surface_indirect_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\device_launch_parameters.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cuda_runtime.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\device_launch_parameters.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\math.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cuda_runtime.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cublas_v2.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cublas_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\driver_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuComplex.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\math.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\vector_types.h;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include\cuda_fp16.h;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\cuda_fp16.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v10.0\include\library_types.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstdio.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_stdio_config.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\iostream;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\istream;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\ostream;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\ios;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xlocnum;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\climits;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cstdio;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\streambuf;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xiosbase;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xlocale;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cstring;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\stdexcept;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\exception;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\type_traits;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xstddef;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cstddef;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\initializer_list;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\malloc.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime_exception.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\eh.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_terminate.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xstring;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xmemory0;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cstdint;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\stdint.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\limits;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\ymath.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cfloat;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\float.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cwchar;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\wchar.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wconio.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wctype.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wdirect.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wio.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_share.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wprocess.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\sys/stat.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\sys/types.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\new;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xutility;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\utility;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\iosfwd;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xatomic0.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\intrin0.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\typeinfo;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\vcruntime_typeinfo.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xlocinfo;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xlocinfo.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\ctype.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\locale.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\memory;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xmemory;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xfacet;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\system_error;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\cerrno;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xcall_once.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xerrc.h;D:\Windows Kits\10\Include\10.0.17763.0\ucrt\share.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\iomanip;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xlocmon;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\xloctime;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\ctime;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\chrono;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\ratio;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\thr/xtimec.h;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include\thr/xthrcommon.h
+           __AdditionalDependencies=
+           __SelectedFilesDep=
+           __ExcludedFromBuild=
+           __ExecutionDescription=Compiling CUDA source file kernel.cu...
+           __ExclusionDescription=Skipping CUDA source file kernel.cu %28excluded from build%29.
+           __Api=Runtime
+           __AdditionalCompilerOptions=
+           __AdditionalDeps=
+           __Include=;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include
+           __GenerateRelocatableDeviceCode=false
+           __NvccCompilation=compile
+           __CudaRuntime=Static
+           __NvccPath=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe
+           __RequiredIncludes=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include
+           __TargetMachinePlatform=64
+           __InterleaveSourceInPTX=false
+           __CodeGeneration=arch=compute_35,code=\"sm_35,compute_35\"
+           __GPUDebugInfo=true
+           __GenerateLineInfo=false
+           __Keep=false
+           __KeepDir=x64\Debug
+           __MaxRegCount=0
+           __PtxAsOptionV=false
+           __Defines=WIN32	WIN64	_DEBUG	_CONSOLE	_MBCS
+           __Emulation=false
+           __HostDebugInfo=true
+           __FastMath=false
+           __Optimization=Od
+           __ProgramDataBaseFileName=x64\Debug\vc141.pdb
+           __Runtime=MDd
+           __RuntimeChecks=RTC1
+           __TypeInfo=
+           __AdditionalCompilerOptions=
+           __Warning=W3
+           __AdditionalOptions=
+           __CommandLineTemplate="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe" [CodeGeneration] --use-local-env -ccbin "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu [GenerateRelocatableDeviceCode] [Include] [RequiredIncludes] [InterleaveSourceInPTX] [GPUDebugInfo] [GenerateLineInfo] [Keep] [KeepDir] [MaxRegCount] [PtxAsOptionV] [TargetMachinePlatform] [NvccCompilation] [CudaRuntime] [AdditionalOptions] [HostDebugInfo] [Emulation] [FastMath] [Defines] -Xcompiler "/EHsc [Warning] /nologo [Optimization] [ProgramDataBaseFileName] /FS /Zi [RuntimeChecks] [Runtime] [TypeInfo]" [CompileOut] "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu"
+     1>Project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (1) is building "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (1:2) on node 2 (CudaBuildCore target(s)).
+   1:2>Building with tools version "15.0".
+   1:2>Target "SetBuildDefaultEnvironmentVariables" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuildCore" depends on it):
+       Using "SetEnv" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Task "SetEnv"
+         PATH=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86;D:\Windows Kits\10\bin\10.0.17763.0\x86;;D:\Programs\Visual Studio\Common7\tools;D:\Programs\Visual Studio\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;D:\Programs\Visual Studio\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\libnvvp;;;C:\Program Files\Java\jdk-11.0.1\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Programs\Matlab\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\kiril\AppData\Local\Microsoft\WindowsApps;;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIB=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\x64;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x64;;D:\Programs\Visual Studio\VC\Auxiliary\VS\lib\x64;;D:\Windows Kits\10\lib\10.0.17763.0\ucrt\x64;;;D:\Programs\Visual Studio\VC\Auxiliary\VS\UnitTest\lib;D:\Windows Kits\10\lib\10.0.17763.0\um\x64;lib\um\x64;;Lib\um\x64
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         LIBPATH=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\lib\x64;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\lib\x64;
+       Done executing task "SetEnv".
+       Task "SetEnv"
+         INCLUDE=D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\include;;D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\atlmfc\include;;D:\Programs\Visual Studio\VC\Auxiliary\VS\include;;D:\Windows Kits\10\Include\10.0.17763.0\ucrt;;;D:\Programs\Visual Studio\VC\Auxiliary\VS\UnitTest\include;D:\Windows Kits\10\Include\10.0.17763.0\um;D:\Windows Kits\10\Include\10.0.17763.0\shared;D:\Windows Kits\10\Include\10.0.17763.0\winrt;D:\Windows Kits\10\Include\10.0.17763.0\cppwinrt;Include\um;
+       Done executing task "SetEnv".
+   1:2>Done building target "SetBuildDefaultEnvironmentVariables" in project "NAiveConvnew.vcxproj".
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+   1:2>Target "PrepareForCudaBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CudaBuildCore" depends on it):
+       Using "SanitizePaths" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "SanitizePaths"
+       Done executing task "SanitizePaths".
+       Using "CudaSetEnvironmentVariable" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\Nvda.Build.CudaTasks.v10.0.dll".
+       Task "CudaSetEnvironmentVariable"
+         Nvda.Build.CudaTasks.CudaSetEnvironmentVariable: Setting 'CUDAFE_FLAGS' to '--sdk_dir "D:\Windows Kits\10"'
+       Done executing task "CudaSetEnvironmentVariable".
+   1:2>Done building target "PrepareForCudaBuild" in project "NAiveConvnew.vcxproj".
+   1:2>Target "CudaBuildCore" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\BuildCustomizations\CUDA 10.0.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (entry point):
+       Building target "CudaBuildCore" completely.
+       Output file "x64\Debug\kernel.cu.obj" does not exist.
+       Task "Message"
+         Compiling CUDA source file kernel.cu...
+       Done executing task "Message".
+       Task "Message" skipped, due to false condition; ('$(__ExcludedFromBuild)' == 'true') was evaluated as ('' == 'true').
+       Task "MakeDir" skipped, due to false condition; (!Exists('$(CompileOutDir)')) was evaluated as (!Exists('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\x64\Debug')).
+       Task "MakeDir" skipped, due to false condition; ('$(__Keep)' == 'true' AND !Exists('$(__KeepDir)')) was evaluated as ('false' == 'true' AND !Exists('x64\Debug')).
+       Initializing task factory "XamlTaskFactory" from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Using "CudaCompile" task from the task factory "XamlTaskFactory".
+       Task "CudaCompile"
+         cmd.exe /C "C:\Users\kiril\AppData\Local\Temp\tmpd30b2e400dd7487fbb52bcfdc525f410.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc141.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu"
+         
+         C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\nvcc.exe" -gencode=arch=compute_35,code=\"sm_35,compute_35\" --use-local-env -ccbin "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc141.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\kernel.cu" 
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(136): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(141): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(146): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(152): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(157): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(44): warning : variable "pseudo_transformSizeY" was declared but never referenced
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(45): warning : variable "MASKS_IN_Y" was declared but never referenced
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(46): warning : variable "MASKS_IN_X" was declared but never referenced
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(136): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(141): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(146): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(152): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(157): warning : transfer of control bypasses initialization of:
+                     variable "threadsPerBlock"
+         (161): here
+                     variable "blocksPerGrid"
+         (162): here
+         
+         kernel.cu
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(87): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(91): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(95): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(162): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): warning C4533: initialization of 'blocksPerGrid' is skipped by 'goto Error'
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(162): note: see declaration of 'blocksPerGrid'
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): note: see declaration of 'Error'
+   1:2>C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): warning C4533: initialization of 'threadsPerBlock' is skipped by 'goto Error'
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(161): note: see declaration of 'threadsPerBlock'
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): note: see declaration of 'Error'
+       Done executing task "CudaCompile".
+       Task "Delete"
+       Done executing task "Delete".
+   1:2>Done building target "CudaBuildCore" in project "NAiveConvnew.vcxproj".
+   1:2>Done Building Project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (CudaBuildCore target(s)).
+     1>Done executing task "MSBuild".
+     1>Done building target "CudaBuild" in project "NAiveConvnew.vcxproj".
+       Target "_CreateCopyFileItems" skipped, due to false condition; ('@(CopyFileToFolders)' != '') was evaluated as ('' != '').
+       Target "_SelectedFiles" skipped. Previously built successfully.
+     1>Target "CopyFileToFolders" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+       Using "GetOutOfDateItems" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Task "GetOutOfDateItems"
+       Done executing task "GetOutOfDateItems".
+       Task "Copy" skipped, due to false condition; ('@(_OutOfDateCopyFile)' != '') was evaluated as ('' != '').
+     1>Done building target "CopyFileToFolders" in project "NAiveConvnew.vcxproj".
+       Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
+     1>Target "_Xsd" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+     1>Done building target "_Xsd" in project "NAiveConvnew.vcxproj".
+     1>Target "MakeDirsForMidl" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Midl" depends on it):
+       Task "Makedir"
+       Done executing task "Makedir".
+     1>Done building target "MakeDirsForMidl" in project "NAiveConvnew.vcxproj".
+       Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
+       Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+       Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+       Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+     1>Target "ComputeMIDLGeneratedCompileInputs" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Midl" depends on it):
+     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterMidl" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Midl" depends on it):
+     1>Done building target "AfterMidl" in project "NAiveConvnew.vcxproj".
+     1>Target "_Midl" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+     1>Done building target "_Midl" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterBuildGenerateSources" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+     1>Done building target "AfterBuildGenerateSources" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterBuildGenerateSourcesEvent" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+     1>Done building target "AfterBuildGenerateSourcesEvent" in project "NAiveConvnew.vcxproj".
+     1>Target "_BuildGenerateSourcesAction" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildGenerateSources" depends on it):
+     1>Done building target "_BuildGenerateSourcesAction" in project "NAiveConvnew.vcxproj".
+     1>Target "BuildGenerateSources" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+     1>Done building target "BuildGenerateSources" in project "NAiveConvnew.vcxproj".
+       Target "PrepareProjectReferences" skipped. Previously built successfully.
+     1>Target "BuildCompileTraverse" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildCompile" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+     1>Done building target "BuildCompileTraverse" in project "NAiveConvnew.vcxproj".
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "BeforeClCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+     1>Done building target "BeforeClCompile" in project "NAiveConvnew.vcxproj".
+       Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+     1>Target "ComputeCLInputPDBName" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+     1>Done building target "ComputeCLInputPDBName" in project "NAiveConvnew.vcxproj".
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "ComputeReferenceCLInput" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+       Task "WriteLinesToFile" skipped, due to false condition; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') was evaluated as ((''!='') and '' != 'true').
+       Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+     1>Done building target "ComputeReferenceCLInput" in project "NAiveConvnew.vcxproj".
+     1>Target "WarnCompileDuplicatedFilename" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and '' != '' and '' == '').
+     1>Done building target "WarnCompileDuplicatedFilename" in project "NAiveConvnew.vcxproj".
+       Target "FixupCLCompileOptions" skipped, due to false condition; ('@(ClCompile)' != '') was evaluated as ('' != '').
+     1>Target "MakeDirsForCl" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForCl" in project "NAiveConvnew.vcxproj".
+       Target "ClCompile" skipped, due to false condition; ('@(ClCompile)' != '') was evaluated as ('' != '').
+       Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
+       Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('' != '' and 'false' == 'True').
+       Target "RunSelectedFileNativeCodeAnalysis" skipped, due to false condition; ('$(RunCppAnalysis)'=='true' and '$(SelectedFiles)'!='') was evaluated as ('false'=='true' and ''!='').
+       Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('' != '' and 'false' == 'True').
+     1>Target "AfterClCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ClCompile" depends on it):
+     1>Done building target "AfterClCompile" in project "NAiveConvnew.vcxproj".
+     1>Target "_ClCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildCompileAction" depends on it):
+     1>Done building target "_ClCompile" in project "NAiveConvnew.vcxproj".
+       Target "_ResGen" skipped, due to false condition; ('@(EmbeddedResource)'!='') was evaluated as (''!='').
+     1>Target "BeforeResourceCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ResourceCompile" depends on it):
+     1>Done building target "BeforeResourceCompile" in project "NAiveConvnew.vcxproj".
+     1>Target "MakeDirsForResourceCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ResourceCompile" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForResourceCompile" in project "NAiveConvnew.vcxproj".
+       Target "ResourceCompile" skipped, due to false condition; ('@(ResourceCompile)' != '') was evaluated as ('' != '').
+     1>Target "AfterResourceCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_ResourceCompile" depends on it):
+     1>Done building target "AfterResourceCompile" in project "NAiveConvnew.vcxproj".
+     1>Target "_ResourceCompile" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildCompileAction" depends on it):
+     1>Done building target "_ResourceCompile" in project "NAiveConvnew.vcxproj".
+       Target "_ImpLib" skipped, due to false condition; ('$(ImpLibCompiled)' == 'true') was evaluated as ('' == 'true').
+       Target "_Lib" skipped, due to false condition; ('$(LibCompiled)' == 'true') was evaluated as ('' == 'true').
+     1>Target "AfterBuildCompileEvent" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildCompileAction" depends on it):
+     1>Done building target "AfterBuildCompileEvent" in project "NAiveConvnew.vcxproj".
+     1>Target "_BuildCompileAction" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildCompile" depends on it):
+     1>Done building target "_BuildCompileAction" in project "NAiveConvnew.vcxproj".
+     1>Target "BuildCompile" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+     1>Done building target "BuildCompile" in project "NAiveConvnew.vcxproj".
+       Target "PrepareProjectReferences" skipped. Previously built successfully.
+     1>Target "BuildLinkTraverse" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildLink" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+     1>Done building target "BuildLinkTraverse" in project "NAiveConvnew.vcxproj".
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "ComputeLegacyManifestEmbedding" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('$(RevertManifestEmbedding)' == 'true' and '$(_LegacyManifestEmbeddingDebug)' == 'true') was evaluated as ('' == 'true' and '' == 'true').
+     1>Done building target "ComputeLegacyManifestEmbedding" in project "NAiveConvnew.vcxproj".
+     1>Target "BeforeLink" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "BeforeLink" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeRCOutputs" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
+     1>Done building target "ComputeRCOutputs" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeRCGeneratedLinkInputs" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "ComputeRCGeneratedLinkInputs" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeManifestGeneratedLinkerInputs" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "ComputeManifestGeneratedLinkerInputs" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeCustomBuildOutput" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Task "CreateItem" skipped, due to false condition; ('%(CustomBuildOutputs.OutputItemType)'!='') was evaluated as (''!='').
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "ComputeCustomBuildOutput" in project "NAiveConvnew.vcxproj".
+       Target "ComputeCLOutputs" skipped, due to false condition; ('@(ClCompile)' != '') was evaluated as ('' != '').
+     1>Target "ComputeCLGeneratedLinkInputs" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "ComputeCLGeneratedLinkInputs" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeLinkInputsFromProject" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "ComputeLinkInputsFromProject" in project "NAiveConvnew.vcxproj".
+       Target "ComputeReferenceLinkInputs" skipped, due to false condition; (@(ProjectReference) != '') was evaluated as ( != '').
+       Target "ComputeCudaCompileOutput" skipped. Previously built successfully.
+     1>Target "ComputeManifestInputsTargets" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "ComputeManifestInputsTargets" in project "NAiveConvnew.vcxproj".
+       Target "ManifestResourceCompile" skipped, due to false condition; ('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '') was evaluated as ('LINK' == 'LINK' and '' != '').
+       Target "CudaLink" skipped, due to false condition; ('@(CudaLink)' != '') was evaluated as ('' != '').
+       Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
+     1>Target "AssignTargetPaths" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareResourceNames" depends on it):
+       Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+       Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and ''=='.manifest').
+     1>Done building target "AssignTargetPaths" in project "NAiveConvnew.vcxproj".
+       Target "AssignTargetPaths" skipped. Previously built successfully.
+     1>Target "SplitResourcesByCulture" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareResourceNames" depends on it):
+       Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
+       Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
+       Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
+       Task "Warning" skipped, due to false condition; ('@(NonResxWithNoCulture)'!='') was evaluated as (''!='').
+       Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "AssignCulture"
+       Done executing task "AssignCulture".
+     1>Done building target "SplitResourcesByCulture" in project "NAiveConvnew.vcxproj".
+       Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
+     1>Target "CreateCustomManifestResourceNames" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareResourceNames" depends on it):
+     1>Done building target "CreateCustomManifestResourceNames" in project "NAiveConvnew.vcxproj".
+     1>Target "PrepareResourceNames" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "PrepareResourceNames" in project "NAiveConvnew.vcxproj".
+     1>Target "MakeDirsForLink" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForLink" in project "NAiveConvnew.vcxproj".
+     1>Target "DoLinkOutputFilesMatch" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' == '') was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe' == '').
+       Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe' != '' and 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe' != 'C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe').
+       Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe' != '' and '.exe' != '' and '.exe' != '.exe').
+       Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe' != '' and 'NAiveConvnew' != '' and 'NAiveConvnew' != 'NAiveConvnew').
+       Task "VCMessage" skipped, due to false condition; ('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet')) was evaluated as ('' != '' and ('Console' == '' or 'Console' == 'NotSet')).
+     1>Done building target "DoLinkOutputFilesMatch" in project "NAiveConvnew.vcxproj".
+     1>Target "PreLinkEvent" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Task "Message" skipped, due to false condition; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+       Task "Exec" skipped, due to false condition; ('%(PreLinkEvent.Command)' != '') was evaluated as ('' != '').
+     1>Done building target "PreLinkEvent" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeLinkSwitches" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Link" depends on it):
+     1>Done building target "ComputeLinkSwitches" in project "NAiveConvnew.vcxproj".
+       Target "CudaLink" skipped, due to false condition; ('@(CudaLink)' != '') was evaluated as ('' != '').
+     1>Target "Link" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Using "Link" task from assembly "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Task "Link"
+         Environment Variables passed to tool:
+           VS_UNICODE_OUTPUT=1920
+         D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64" cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.lib" /MACHINE:X64 x64\Debug\kernel.cu.obj
+         Tracking command:
+         D:\Programs\Visual Studio\MSBuild\15.0\Bin\Tracker.exe /a /d "C:\Program Files (x86)\MSBuild\15.0\FileTracker\FileTracker32.dll" /i "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\x64\Debug\NAiveConvnew.tlog" /r "C:\USERS\KIRIL\ONEDRIVE\DOCUMENTS\PROJECT1\GPU CONVOLUTION\NAIVECONVNEW\NAIVECONVNEW\X64\DEBUG\KERNEL.CU.OBJ" /b MSBuildConsole_CancelEventae50d8239a474b37a6c3bf18f726ca3a  /c "D:\Programs\Visual Studio\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64\link.exe"  /ERRORREPORT:PROMPT /OUT:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64" cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.lib" /MACHINE:X64 x64\Debug\kernel.cu.obj
+            Creating library C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.lib and object C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exp
+       Done executing task "Link".
+       Task "Message"
+         NAiveConvnew.vcxproj -> C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\x64\Debug\NAiveConvnew.exe
+       Done executing task "Message".
+       Task "VCMessage" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
+                    %(Link.GenerateDebugInformation) == 'DebugFastLink' and %(Link.ProgramDataBaseFileName) != '') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
+                    DebugFastLink == 'DebugFastLink' and  != '').
+       Task "VCMessage" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
+                    %(Link.GenerateDebugInformation) == 'true' and %(Link.ProgramDataBaseFileName) != '') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'False' == 'true') and
+                    DebugFastLink == 'true' and  != '').
+     1>Done building target "Link" in project "NAiveConvnew.vcxproj".
+       Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
+       Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
+       Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
+     1>Target "ComputeLinkImportLibraryOutputsForClean" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterLink" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_Link" depends on it):
+     1>Done building target "AfterLink" in project "NAiveConvnew.vcxproj".
+     1>Target "_Link" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_Link" in project "NAiveConvnew.vcxproj".
+     1>Target "_ALink" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_ALink" in project "NAiveConvnew.vcxproj".
+       Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
+     1>Target "_Manifest" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+       Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
+     1>Done building target "_Manifest" in project "NAiveConvnew.vcxproj".
+     1>Target "RegisterOutput" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
+     1>Done building target "RegisterOutput" in project "NAiveConvnew.vcxproj".
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "ResolvedXDCMake" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_XdcMake" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
+     1>Done building target "ResolvedXDCMake" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeCLCompileGeneratedXDCFiles" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_XdcMake" depends on it):
+     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "NAiveConvnew.vcxproj".
+     1>Target "MakeDirsForXdcMake" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_XdcMake" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForXdcMake" in project "NAiveConvnew.vcxproj".
+       Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
+     1>Target "_XdcMake" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_XdcMake" in project "NAiveConvnew.vcxproj".
+     1>Target "ComputeCLCompileGeneratedSbrFiles" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BscMake" depends on it):
+     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "NAiveConvnew.vcxproj".
+     1>Target "MakeDirsForBscMake" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BscMake" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForBscMake" in project "NAiveConvnew.vcxproj".
+       Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
+       Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+     1>Target "_BscMake" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_BscMake" in project "NAiveConvnew.vcxproj".
+     1>Target "_GenerateSatelliteAssemblyInputs" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+       Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+       Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "NAiveConvnew.vcxproj".
+       Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+       Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
+     1>Target "CreateSatelliteAssemblies" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "CreateSatelliteAssemblies" in project "NAiveConvnew.vcxproj".
+     1>Target "_Appverifier" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_Appverifier" in project "NAiveConvnew.vcxproj".
+     1>Target "_Deploy" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "_Deploy" in project "NAiveConvnew.vcxproj".
+       Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+       Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
+       Target "AssignTargetPaths" skipped. Previously built successfully.
+       Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+       Target "_GetProjectReferenceTargetFrameworkProperties" skipped. Previously built successfully.
+     1>Target "GetCopyToOutputDirectoryXamlAppDefs" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "NAiveConvnew.vcxproj".
+     1>Target "GetCopyToOutputDirectoryItems" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+     1>Done building target "GetCopyToOutputDirectoryItems" in project "NAiveConvnew.vcxproj".
+       Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
+       Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
+     1>Target "_CopySourceItemsToOutputDirectory" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+     1>Done building target "_CopySourceItemsToOutputDirectory" in project "NAiveConvnew.vcxproj".
+       Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
+       Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
+     1>Target "_CheckForCompileOutputs" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+     1>Done building target "_CheckForCompileOutputs" in project "NAiveConvnew.vcxproj".
+       Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+     1>Target "CopyFilesToOutputDirectory" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "PrepareForRun" depends on it):
+       Task "Copy" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true') was evaluated as ('true' == 'true' and 'true' != 'true').
+       Task "CopyRefAssembly" skipped, due to false condition; ('$(ProduceReferenceAssembly)' == 'true' and '$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true') was evaluated as ('false' == 'true' and 'true' == 'true' and 'true' != 'true').
+       Task "Message" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)'!='true') was evaluated as ('true' == 'true' and 'true'!='true').
+       Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
+       Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
+       Task "Copy" skipped, due to false condition; ('$(_DebugSymbolsProduced)'=='true' and '$(SkipCopyingSymbolsToOutputDirectory)' != 'true' and '$(CopyOutputSymbolsToOutputDirectory)'=='true') was evaluated as ('false'=='true' and '' != 'true' and 'true'=='true').
+       Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
+       Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
+       Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
+       Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
+       Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
+     1>Done building target "CopyFilesToOutputDirectory" in project "NAiveConvnew.vcxproj".
+     1>Target "PrepareForRun" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+     1>Done building target "PrepareForRun" in project "NAiveConvnew.vcxproj".
+       Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+     1>Target "PostBuildEvent" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "_BuildLinkAction" depends on it):
+       Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+       Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
+     1>Done building target "PostBuildEvent" in project "NAiveConvnew.vcxproj".
+     1>Target "_BuildLinkAction" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_BuildLinkAction" in project "NAiveConvnew.vcxproj".
+     1>Target "BuildLink" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+     1>Done building target "BuildLink" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterBuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+     1>Done building target "AfterBuild" in project "NAiveConvnew.vcxproj".
+     1>Target "FinalizeBuildStatus" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Build" depends on it):
+       Task "Delete"
+         Deleting file "x64\Debug\NAiveConvnew.tlog\unsuccessfulbuild".
+       Done executing task "Delete".
+       Task "Touch"
+         Touching "x64\Debug\NAiveConvnew.tlog\NAiveConvnew.lastbuildstate".
+       Done executing task "Touch".
+     1>Done building target "FinalizeBuildStatus" in project "NAiveConvnew.vcxproj".
+     1>Target "Build" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+     1>Done building target "Build" in project "NAiveConvnew.vcxproj".
+     1>Target "AfterRebuild" in file "D:\Programs\Visual Studio\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (target "Rebuild" depends on it):
+     1>Done building target "AfterRebuild" in project "NAiveConvnew.vcxproj".
+       Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+     1>Target "Rebuild" in file "D:\Programs\Visual Studio\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" from project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (entry point):
+     1>Done building target "Rebuild" in project "NAiveConvnew.vcxproj".
+     1>Done Building Project "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+       "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (Rebuild target) (1) ->
+       "C:\Users\kiril\OneDrive\Documents\Project1\GPU convolution\NAiveConvnew\NAiveConvnew\NAiveConvnew.vcxproj" (CudaBuildCore target) (1:2) ->
+       (CudaBuildCore target) -> 
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(136): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(141): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(146): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(152): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(157): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(44): warning : variable "pseudo_transformSizeY" was declared but never referenced
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(45): warning : variable "MASKS_IN_Y" was declared but never referenced
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(46): warning : variable "MASKS_IN_X" was declared but never referenced
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(136): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(141): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(146): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(152): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(157): warning : transfer of control bypasses initialization of:
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(87): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(91): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(95): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(162): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): warning C4533: initialization of 'blocksPerGrid' is skipped by 'goto Error'
+         C:/Users/kiril/OneDrive/Documents/Project1/GPU convolution/NAiveConvnew/NAiveConvnew/kernel.cu(222): warning C4533: initialization of 'threadsPerBlock' is skipped by 'goto Error'
+
+    19 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.32
