@@ -1,0 +1,187 @@
+	__shared__ float sum_shared[NUM_OF_KERNELS][transformSizeX];
+	int Y = blockIdx.y * blockDim.y + threadIdx.y;
+	int X = blockIdx.x * blockDim.x + threadIdx.x;
+
+	if (Y < transformSizeY)
+	{
+		int convX = Y % convLayerSizeX;
+		int convY = Y / convLayerSizeX;
+		int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
+		int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
+		int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
+		if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
+		{
+
+			reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
+		}
+		else
+		{
+			reducedMatrix[(Y * transformSizeX) + X] = 0;
+		}			
+		float sum = 0;
+		float reduced_value = reducedMatrix[Y * transformSizeX + X];
+		for (int j = 0; j < NUM_OF_KERNELS; j++)
+		{
+			sum += weights[j * transformSizeX + X] * reduced_value;
+			sum_shared[j] += sum;
+			sum = 0;
+			
+		}
+		__syncthreads();
+		for (int j = 0; j < NUM_OF_KERNELS; j++)
+		{
+			result[j * convLayerSizeX * convLayerSizeY + Y] = sum_shared[j];
+		}
+		
+		
+		---------------------------------------------------------------
+		
+		
+	int Y = blockIdx.y * blockDim.y + threadIdx.y;
+	int X = blockIdx.x * blockDim.x + threadIdx.x;
+
+	if (Y < transformSizeY)
+	{
+		int convX = Y % convLayerSizeX;
+		int convY = Y / convLayerSizeX;
+		int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
+		int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
+		int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
+		if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
+		{
+
+			reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
+		}
+		else
+		{
+			reducedMatrix[(Y * transformSizeX) + X] = 0;
+		}
+		__syncthreads();
+		if (X == 0)
+		{
+			
+			float sum = 0;
+			for (int j = 0; j < NUM_OF_KERNELS; j++)
+			{
+
+				for (int i = 0; i < transformSizeX; i++)
+				{
+					sum += weights[j * transformSizeX + i] * reducedMatrix[Y * transformSizeX + i];
+					/*
+					if (Y == 0 && j==0)
+					{
+						printf("weights: %f , reduced: %f , sum: %f\n", weights[j * transformSizeX + i], reducedMatrix[Y * transformSizeX + i], sum);
+					}
+					*/
+					
+					//sum += weights[j * transformSizeX + i] * reducedMatrix[Y * transformSizeX + i];
+				}
+				result[j * convLayerSizeX * convLayerSizeY + Y] = sum;
+				sum = 0;
+				//result[j * transformSizeY + (Y / transformSizeY)] = sum;
+			}
+			
+			//rowMul<<<1, NUM_OF_KERNELS>>>(weights, &reducedMatrix[Y * transformSizeX], &result[convY * convLayerSizeX + convX]);
+		}
+	}
+	
+-------------------------------------------
+
+	__shared__ float sum_shared[NUM_OF_KERNELS][transformSizeX];
+	int Y = blockIdx.y * blockDim.y + threadIdx.y;
+	int X = blockIdx.x * blockDim.x + threadIdx.x;
+	if (threadIdx.x == 0)
+	{
+		for (int i = 0; i < NUM_OF_KERNELS; i++)
+		{
+			for (int j = 0; j < transformSizeX; j++)
+			{
+				sum_shared[i][j] = 0;
+			}
+		}
+	}
+	__syncthreads();
+	if (Y < transformSizeY)
+	{
+		int convX = Y % convLayerSizeX;
+		int convY = Y / convLayerSizeX;
+		int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
+		int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
+		int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
+		if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
+		{
+
+			reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
+		}
+		else
+		{
+			reducedMatrix[(Y * transformSizeX) + X] = 0;
+		}
+		float sum = 0;
+		float reduced_value = reducedMatrix[Y * transformSizeX + X];
+		for (int j = 0; j < NUM_OF_KERNELS; j++)
+		{
+			sum_shared[j][X] += weights[j * transformSizeX + X] * reduced_value;
+		}
+		__syncthreads();
+		if (threadIdx.x == 0)
+		{
+			for (int i = 0; i < NUM_OF_KERNELS; i++)
+			{
+				for (int j = 1; j < transformSizeX; j++)
+				{
+					sum_shared[i][0] += sum_shared[i][j];
+				}
+				result[i * convLayerSizeX * convLayerSizeY + Y] = sum_shared[i][0];
+			}
+		}
+	}
+	---------------------------------------
+	__shared__ float sum_shared[NUM_OF_KERNELS][transformSizeX];
+	int Y = blockIdx.x * blockDim.y + threadIdx.y;
+	int X = threadIdx.x;
+	if (threadIdx.x == 0)
+	{
+		for (int i = 0; i < NUM_OF_KERNELS; i++)
+		{
+			for (int j = 0; j < transformSizeX; j++)
+			{
+				sum_shared[i][j] = 0;
+			}
+		}
+	}
+	__syncthreads();
+	int convX = Y % convLayerSizeX;
+	int convY = Y / convLayerSizeX;
+	int inputX = convX * STRIDEX + X % CONV_RECP_SIZEY;
+	int inputY = convY * STRIDEY + (X % (CONV_RECP_SIZEX * CONV_RECP_SIZEY)) / CONV_RECP_SIZEX;
+	int inputZ = X / (CONV_RECP_SIZEX * CONV_RECP_SIZEY);
+	if ((inputX >= ZPADX && inputX <= (ZPADX + WIDTH - 1)) && (inputY >= ZPADY && inputY <= (ZPADY + LENGTH - 1)))
+	{
+
+		reducedMatrix[(Y * transformSizeX) + X] = inputMatrix[(inputZ * LENGTH + inputY - ZPADY) * WIDTH + inputX - ZPADX];
+	}
+	else
+	{
+		reducedMatrix[(Y * transformSizeX) + X] = 0;
+	}
+	float sum = 0;
+	float reduced_value = reducedMatrix[Y * transformSizeX + X];
+	for (int j = 0; j < NUM_OF_KERNELS; j++)
+	{
+		sum_shared[j][X] = reduced_value * weights[j * transformSizeX + X];
+	}
+	__syncthreads();
+	if (X == 0 )
+	{
+		for (int i = 0; i < NUM_OF_KERNELS; i++)
+		{
+			for (int j = 0; j < transformSizeX; j++)
+			{
+				//printf("kernel: %d, X: %d, sum: %f\n ", i, j, sum_shared[i][j]);
+				sum_shared[i][0] += sum_shared[i][j];
+			}
+			//printf("beark\n ");
+			result[i * convLayerSizeX * convLayerSizeY + Y] = sum_shared[i][0];
+		}
+	}
