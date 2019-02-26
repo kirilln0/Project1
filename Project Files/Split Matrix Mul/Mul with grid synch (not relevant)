@@ -1,0 +1,303 @@
+
+#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
+#include <cooperative_groups.h>
+
+#include <stdlib.h>
+#include <math.h>
+#include <cuda_runtime.h>
+#include "cublas_v2.h"
+
+#include <stdio.h>
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <chrono>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <assert.h>
+
+ // Block Size
+#define BLOCK_SIZE 32
+
+int size;
+int size_a;
+int size_b;
+int print_mats = 1;
+
+typedef struct
+{
+	float ** element;
+} matrix;
+
+
+/**
+ * Allocates memory for a matrix of size SIZE
+ * The memory is allocated row-major order, i.e.
+ *  elements from the same row are allocated at contiguous
+ *  memory addresses.
+ **/
+void allocate_matrix(matrix* m, int size_y, int size_x)
+{
+	int i;
+	cudaError_t rc;
+
+	// allocate array for all the rows
+	rc = cudaMallocManaged((void**)&(m->element), sizeof(float*) * size_y);
+	if (rc != cudaSuccess)
+	{
+		fprintf(stderr, "CUDA error: %s\n", cudaGetErrorString(rc));
+		exit(1);
+	}
+
+	// allocate an array for each row of the matrix
+	for (i = 0; i < size_y; i++)
+	{
+		rc = cudaMallocManaged((void**)&(m->element[i]), sizeof(float) * size_x);
+		if (rc != cudaSuccess)
+		{
+			fprintf(stderr, "CUDA error: %s\n", cudaGetErrorString(rc));
+			exit(1);
+		}
+	}
+}
+
+/**
+ * Free the memory allocated for a matrix.
+ **/
+void free_matrix(matrix* m, int size_y) {
+	int i;
+	for (i = 0; i < size_y; i++)
+		cudaFree(m->element[i]);
+	cudaFree(m->element);
+}
+
+/**
+ * Initializes the elements of the matrix with
+ * random values between 0 and 9
+ **/
+void init_matrix(matrix m, int size_y, int size_x)
+{
+	int i, j;
+
+	for (i = 0; i < size_y; i++)
+		for (j = 0; j < size_x; j++)
+		{
+			m.element[i][j] = rand() % 10;
+		}
+}
+
+/**
+ * Initializes the elements of the matrix with
+ * element 0.
+ **/
+void init_matrix_zero(matrix m, int size_y, int size_x)
+{
+	int i, j;
+
+	for (i = 0; i < size_y; i++)
+		for (j = 0; j < size_x; j++)
+		{
+			m.element[i][j] = 0.0;
+		}
+}
+
+
+/**
+ * Multiplies matrix @a with matrix @b storing
+ * the result in matrix @result
+ *
+ * The multiplication algorithm is the O(n^3)
+ * algorithm
+ */
+void mm(matrix a, matrix b, matrix result)
+{
+	int i, j, k;
+
+	// Do the multiplication
+	for (i = 0; i < size_a; i++)
+		for (j = 0; j < size_b; j++)
+			for (k = 0; k < size; k++)
+				result.element[i][j] += a.element[i][k] * b.element[k][j];
+}
+
+/**
+ * Each kernel computes the result element (i,j).
+ */
+__global__ void mm_kernel(matrix a, matrix b, matrix result, int size, int size_y, int size_x)
+{
+	printf("X\n");
+	// Block Index and Thread Index
+	int bx = blockIdx.x;
+	int by = blockIdx.y;
+	int tx = threadIdx.x;
+	int ty = threadIdx.y;
+
+	// Current cell to be calculated (result[cx][cy]);
+	int cx = bx * BLOCK_SIZE + tx;
+	int cy = by * BLOCK_SIZE + ty;
+
+	// Variables
+	int blkStart, k;
+
+	// Variable to store the value of result[cx][cy]
+	float c = 0;
+
+	// Go through sub-matrices a[BLOCK_SIZE][size] and b[size, BLOCK_SIZE]
+	// Do not load all at one time. Load these sub-matrices by block (sub-sub-matrices) of size (BLOCK_SIZE, BLOCK_SIZE).
+	for (blkStart = 0; blkStart < size; blkStart += BLOCK_SIZE) {
+
+		// Shared mem for the sub-sub-matrices of a and b
+		__shared__ float a_sub[BLOCK_SIZE][BLOCK_SIZE];
+		__shared__ float b_sub[BLOCK_SIZE][BLOCK_SIZE];
+
+		// Load sub-sub-matrices, each thread load 1 cell only
+		a_sub[tx][ty] = (cx < size && blkStart + ty < size_y) ? a.element[cx][blkStart + ty] : 0;
+		b_sub[tx][ty] = (blkStart + tx < size_x && cy < size) ? b.element[blkStart + tx][cy] : 0;
+
+		// Make sure all data is loaded.
+		__syncthreads();
+
+		// For-loop to calculate the value of result[cx][cy] by 2 sub-sub-matrices.
+		// Unroll is a minor improvement of Cuda for simple for-loop.
+#pragma unroll
+		for (k = 0; k < BLOCK_SIZE; k++) {
+			c += a_sub[tx][k] * b_sub[k][ty];
+		}
+
+		// Make sure all computations are done before the next phase.
+		__syncthreads();
+	}
+
+	// Verify the cell, add to the result.
+	if (cx >= size_x || cy >= size_y) return;
+	result.element[cx][cy] = c;
+}
+
+void print_matrix(matrix m, int size_y, int size_x)
+{
+	int i, j;
+
+	for (i = 0; i < size_y; i++)
+	{
+		printf("row %4d: ", i);
+		for (j = 0; j < size_x; j++)
+			printf("%6.2f  ", m.element[i][j]);
+		printf("\n");
+	}
+}
+
+
+
+void work()
+{
+	matrix a, b, result1, result2;
+	long long before, after;
+	int correct, i, j, dim_y, dim_x;
+	cudaError_t rc;
+
+	// Allocate memory for matrices
+	allocate_matrix(&a, size_a, size);
+	allocate_matrix(&b, size, size_b);
+	allocate_matrix(&result1, size_a, size_b);
+	allocate_matrix(&result2, size_a, size_b);
+
+	// Initialize matrix elements
+	init_matrix(a, size_a, size);
+	init_matrix(b, size, size_b);
+
+	// Perform sequential matrix multiplication
+	clock_t start, end;
+	start = clock();
+	mm(a, b, result1);
+	end = clock();
+	fprintf(stderr, "Matrix multiplication on CPU took %1.2lf seconds\n", (double(end - start) / CLOCKS_PER_SEC));
+
+	// Perform CUDA matrix  multiplication
+	dim3 block(BLOCK_SIZE, BLOCK_SIZE);			// a block of BLOCK_SIZE x BLOCK_SIZE CUDA threads
+	dim_y = (size_a % BLOCK_SIZE == 0) ? size_a / BLOCK_SIZE : size_a / BLOCK_SIZE + 1;
+	dim_x = (size_b % BLOCK_SIZE == 0) ? size_b / BLOCK_SIZE : size_b / BLOCK_SIZE + 1;
+	dim3 grid(dim_y, dim_x);						// a grid of CUDA thread blocks
+	start = clock();
+
+
+	cudaDeviceProp deviceProp;
+	int device;
+	cudaGetDeviceProperties(&deviceProp, cudaGetDevice(&device));
+	void *kernelArgs[] = {
+	(void *)&a,  (void *)&b, (void *)&result2, (void *)&size,
+	(void *)&size_a, (void *)&size_b,
+	};
+	cudaLaunchCooperativeKernel((void*)mm_kernel, grid, block, kernelArgs);
+	printf("HERE :%d",deviceProp.cooperativeLaunch);
+	cudaDeviceSynchronize();
+	end = clock();
+	fprintf(stderr, "Matrix multiplication on GPU took %1.2lf seconds\n", (double(end - start) / CLOCKS_PER_SEC));
+
+	// was there any error?
+	rc = cudaGetLastError();
+	if (rc != cudaSuccess)
+		printf("Last CUDA error %s\n", cudaGetErrorString(rc));
+
+	// Compare the results
+	correct = 1;
+	for (i = 0; correct && i < size_a; i++)
+		for (j = 0; j < size_b; j++)
+			if (result1.element[i][j] != result2.element[i][j]) {
+				correct = 0;
+				break;
+			}
+
+	if (correct)
+		printf("The result matrices are identical!\n");
+	else
+		printf("Difference in result matrices at element (%d, %d)!\n", i, j);
+
+	if (print_mats) {
+		printf("\nMatrix a:\n");
+		print_matrix(a, size_a, size);
+		printf("\nMatrix b:\n");
+		print_matrix(b, size, size_b);
+		printf("\nMatrix result1:\n");
+		print_matrix(result1, size_a, size_b);
+		printf("\nMatrix result2:\n");
+		print_matrix(result2, size_a, size_b);
+	}
+
+
+	free_matrix(&a, size_a);
+	free_matrix(&b, size);
+	free_matrix(&result1, size);
+	free_matrix(&result2, size);
+}
+
+
+int main(int argc, char ** argv)
+{
+	srand(0);
+
+	printf("Usage: %s <size>\n", argv[0]);
+
+	if (argc >= 2) {
+		size = atoi(argv[1]);
+		size_a = 128;
+		size_b = 128;
+	}
+
+	else {
+		size = 8;
+		size_a = 8;
+		size_b = 8;
+	}
+
+
+	fprintf(stderr, "Sequential matrix multiplication of size %d\n", size);
+
+	// Multiply the matrices
+	work();
+
+	return 0;
+}
