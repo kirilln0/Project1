@@ -15,17 +15,17 @@
 
 // Input size
 int const BATCH = 1; //Must be 1 in this program
-int const DEPTH = 1;
-int const WIDTH = 4;
-int const LENGTH = 4;
+int const DEPTH = 3;
+int const WIDTH = 1024;
+int const LENGTH = 1024;
 // Kernel characteristics
 int const ZPADX = 0;
 int const ZPADY = 0;
 int const STRIDEX = 1;
 int const STRIDEY = 1;
-int const CONV_RECP_SIZEX = 2;
-int const CONV_RECP_SIZEY = 2;
-int const NUM_OF_KERNELS = 1;
+int const CONV_RECP_SIZEX = 3;
+int const CONV_RECP_SIZEY = 3;
+int const NUM_OF_KERNELS = 128;
 // Convolution output characteristics
 int const convLayerSizeX = ((WIDTH - CONV_RECP_SIZEX + 2 * ZPADX) / STRIDEX + 1);
 int const convLayerSizeY = ((LENGTH - CONV_RECP_SIZEY + 2 * ZPADY) / STRIDEY + 1);
@@ -33,8 +33,8 @@ int const convLayerSizeY = ((LENGTH - CONV_RECP_SIZEY + 2 * ZPADY) / STRIDEY + 1
 int const transformSizeY = convLayerSizeY * convLayerSizeX;
 int const transformSizeX = CONV_RECP_SIZEX * CONV_RECP_SIZEY * DEPTH;
 
-#define COUT_input if (1) std::cout
-#define COUT_result if (1) std::cout
+#define COUT_input if (0) std::cout
+#define COUT_result if (0) std::cout
 
 __global__
 void transformToMul(float* inputMatrix, float* reducedMatrix)
@@ -168,7 +168,6 @@ int main()
 		fprintf(stderr, "ElapsedTime failed: %s\n", cudaGetErrorString(cudaStatus));
 		goto Error;
 	}
-	time = time * 1000;
 	cudaStatus = cudaDeviceSynchronize();
 	if (cudaStatus != cudaSuccess) {
 		fprintf(stderr, "DeviceSynchronize failed: %s\n", cudaGetErrorString(cudaStatus));
@@ -195,7 +194,7 @@ int main()
 	}
 
 	// CLEAN UP
-	printf("Time for the kernel: %f us\n", time);
+	printf("Transform time: %f msec.\n", time);
 Error:
 	cudaFree(deviceInputMatrix);
 	cudaFree(deviceTransformedInput);
