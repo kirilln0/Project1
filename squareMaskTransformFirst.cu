@@ -43,31 +43,43 @@ int const KERNEL_LIMIT = transformSizeY * DEPTH;
 __global__
 void transformToMul(float* inputMatrix, float* reducedMatrix)
 {
-	int idx = blockIdx.x * blockDim.x + threadIdx.x;
+	unsigned int idx = blockIdx.x * blockDim.x + threadIdx.x;
 	if (idx < KERNEL_LIMIT)
 	{
-		int w_out = idx % convLayerSizeX;
-		int indx = idx / convLayerSizeX;
-		int h_out = indx % convLayerSizeY;
-		int h_in = h_out * STRIDEY - ZPADY;
-		int w_in = w_out * STRIDEX - ZPADX;
-		int channel_in = indx / convLayerSizeY;
-		int channel_out = channel_in * KERNEL_2D_SIZE;
-		reducedMatrix += (channel_out * convLayerSizeY + h_out) * convLayerSizeX + w_out;
-		inputMatrix += (channel_in * LENGTH + h_in) * WIDTH + w_in;
-#pragma unroll
-		for (int i = 0; i < CONV_RECP_SIZEY; ++i)
+		unsigned int w_out = idx % convLayerSizeX;
+		unsigned int indx = idx / convLayerSizeX;
+		unsigned int h_out = indx % convLayerSizeY;
+		unsigned int h_in = h_out * STRIDEY - ZPADY;
+		unsigned int w_in = w_out * STRIDEX - ZPADX;
+		if (((h_out & 1) == 0 && (w_out & 1) == 0) || ((h_out & 1) == 1 && (w_out & 1) == 1))
 		{
-			for (int j = 0; j < CONV_RECP_SIZEX; ++j)
+			if ((h_out & 1) == 0)
 			{
-				int h = h_in + i;
-				int w = w_in + j;
-				*reducedMatrix = (h >= 0 && w >= 0 && h < LENGTH && w < WIDTH) ?
-					inputMatrix[i * WIDTH + j] : 0;
-				reducedMatrix += transformSizeY;
+				w_out = (w_out >> 1);
+			}
+			else
+			{
+				w_out = (w_out >> 1) + (convLayerSizeX >> 1);
+			}
+			h_out = (h_out >> 1);
+			
+			unsigned int channel_in = indx / convLayerSizeY;
+			unsigned int channel_out = channel_in * KERNEL_2D_SIZE;
+			reducedMatrix += (channel_out * convLayerSizeY + h_out) * convLayerSizeX + w_out; // here
+			inputMatrix += (channel_in * LENGTH + h_in) * WIDTH + w_in;
+#pragma unroll
+			for (int i = 0; i < CONV_RECP_SIZEY; ++i)
+			{
+				for (int j = 0; j < CONV_RECP_SIZEX; ++j)
+				{
+					unsigned int h = h_in + i;
+					unsigned int w = w_in + j;
+					*reducedMatrix = (h >= 0 && w >= 0 && h < LENGTH && w < WIDTH) ?
+						inputMatrix[i * WIDTH + j] : 0;
+					reducedMatrix += transformSizeY;
+				}
 			}
 		}
-		
 	}
 }
 
@@ -109,6 +121,7 @@ void generateFlat4DData(float* matrix, int x, int y, int z, int d, double type, 
 
 int main()
 {
+
 	// Performance test variables
 	cudaEvent_t start, stop;
 	float time;
